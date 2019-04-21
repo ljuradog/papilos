@@ -7,6 +7,7 @@
 		
 		<!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="../../assets/style/bootstrap.min.css">
+		<link rel="stylesheet" href="../../assets/style/datatables.min.css">
 
 
 		<style>
@@ -41,33 +42,13 @@
 		<div class="container">
 			<p class="lead">Bienvenido <span id="usuario">Leo</span>, </p>
 			
-			<h2 class="my-0 mr-md-auto font-weight-normal">Cotizaciones</h2>
-			<a class="btn btn-outline-primary float-sm-right" href="solicitud.php">Solicitar Nueva Cotización</a>
-			<table class="table">
-					<thead>
-							<tr>
-									<th class="text-center">Id</th>
-									<th class="text-center">Titulo</th>
-									<th class="text-center">Items</th>
-									<th class="text-center">Ofertas</th>
-									<th class="text-center">Estado</th>
-									<th class="text-center"></th>
-							</tr>
-					</thead>
-					<tbody>
-							<tr>
-									<td class="text-right">1</td>
-									<td>Compra Secretaria</td>
-									<td class="text-right">20</td>
-									<td class="text-right">0</td>
-									<td class="text-center">Abierta</td>
-									<td><a class="p-2 text-primary" href="#">Ver</a> <a class="p-2 text-danger" href="#">Eliminar</a></td>
-							</tr>
-					</tbody>
-			</table>	
-			
-
-			
+			<h2 class="my-0 mr-md-auto mb-2 font-weight-normal">Catálogo</h2>
+			<div class="row">
+				<div class="col-md-12 order-md-2 mb-4">
+					<table id="tablaCatalogo" class="display" width="100%"></table>
+				</div>
+				
+			</div>
 
 			<footer class="pt-4 pt-md-5 border-top">
 				<div class="row">
@@ -79,6 +60,11 @@
 		</div>
 
 		<script src="../../assets/script/jquery-3.3.1.min.js"></script>
+		<script src="../../assets/script/datatables.min.js"></script>
+		<script src="../../assets/script/underscore.js"></script>
+
 		<script src="../../script/common.js?v=12"></script>
+
+		<script src="../../script/catalogo.js?v=12"></script>
 	</body>
 </html>

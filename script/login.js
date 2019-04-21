@@ -1,5 +1,3 @@
-var APIGatewayLogin = '/login.php';
-
 $('#login').submit(function (e) {
 	e.preventDefault();
 	rutaLoginStatus = 'esperarLlamada.php';
@@ -13,9 +11,7 @@ $('#login').submit(function (e) {
 
 var loginStatus = function (result, status) {
 
-    console.log("Status =" + status);
-    console.log("Resultado = " + result);
-	resultado = JSON.parse(result);
+    resultado = JSON.parse(result);
 
     var session = {
         'userName': resultado.user.username,
@@ -23,13 +19,19 @@ var loginStatus = function (result, status) {
         'token': resultado.token
     };
 
-    Ajax('POST', '', appSetSession, JSON.stringify(session), function (response) {
-        	
-		var perfil = resultado.user.authorities[0].authority;
-		switch (perfil) {
-			case 'ROLE_CLIENTE':
-			window.location.href = 'perfil/cliente';
-			break;
-		};
+    Ajax('POST', '', appSetSession, JSON.stringify(session), function (response) {    	
+			var perfil = resultado.user.authorities[0].authority;
+			switch (perfil) {
+				case 'ROLE_CLIENTE':
+					window.location.href = 'perfil/cliente';
+					break;
+				case 'ROLE_PROVEEDOR':
+					window.location.href = 'perfil/proveedor';
+					break;
+				case 'ROLE_ADMIN':
+					window.location.href = 'perfil/cliente';
+					break;
+			};
     });
 };
+

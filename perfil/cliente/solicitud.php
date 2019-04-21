@@ -7,6 +7,7 @@
 		
 		<!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="../../assets/style/bootstrap.min.css">
+		<link rel="stylesheet" href="../../assets/style/datatables.min.css">
 
 
 		<style>
@@ -33,7 +34,8 @@
 		<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
 			<h3 id="empresa" class="my-0 mr-md-auto font-weight-normal"></h3>
 			<nav class="my-2 my-md-0 mr-md-3">
-				<a class="btn btn-outline-primary" href="#">Cerrar Sesión</a>	
+				<a class="p-2 text-dark" href="/perfil/cliente/">Cotizaciones</a>
+				<a class="btn btn-outline-primary" href="/controller/closeSession.php">Cerrar Sesión</a>	
 			</nav>
 		</div>
 
@@ -43,40 +45,23 @@
 			<h2 class="my-0 mr-md-auto mb-2 font-weight-normal">Catálogo</h2>
 			<div class="row">
 				<div class="col-md-7 order-md-2 mb-4">
-					<table class="table">
-						<thead>
-							<tr>
-								<th class="text-right">Id</th>
-								<th class="text-center">Producto / Servicio</th>
-								<th class="text-center"></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="text-right">1</td>
-								<td>Lápiz Negro</td>
-								<td><a class="p-2 text-primary" href="#">Agregar</a></td>
-							</tr>
-						</tbody>
-					</table>
+					<table id="tablaCatalogo" class="display" width="100%"></table>
 				</div>
 				<div class="col-md-4 order-md-2 mb-4">
 					<h4 class="d-flex justify-content-between align-items-center mb-3">
-						<span class="text-muted">Tu carrito</span>
+						<span class="text-muted">Nueva Cotización</span>
 						<span class="badge badge-secondary badge-pill">1</span>
 					</h4>
+
 					<ul class="list-group mb-3">
 						<li class="list-group-item d-flex justify-content-between lh-condensed">
 							<div>
-								<h6 id="planNombre" class="my-0">Reserva</h6>
-								<small id="planDescripcion" class="text-muted">Todo Incluido - Sin tiquetes</small>
+								<h6 class="my-0"> Producto </h6>
 							</div>
-							<span class="text-muted">$ <span id="reservaSubtotal">12</span></span>
+							<span class="text-muted">Cantidad</span>
 						</li>
-						<li class="list-group-item d-flex justify-content-between">
-							<span>Total (COP)</span>
-							<strong>$ <span id="reservaValorReserva"> </span></strong>
-						</li>
+						<div id="cotizacionResumen">
+						</div>
 					</ul>
 
 					<form class="card p-2">
@@ -100,6 +85,11 @@
 		</div>
 
 		<script src="../../assets/script/jquery-3.3.1.min.js"></script>
+		<script src="../../assets/script/datatables.min.js"></script>
+		<script src="../../assets/script/underscore.js"></script>
+
 		<script src="../../script/common.js?v=12"></script>
+
+		<script src="../../script/nuevaSolicitud.js?v=12"></script>
 	</body>
 </html>

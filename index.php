@@ -22,6 +22,9 @@
         </div>
 
         <script src="./assets/script/jquery-3.3.1.min.js"></script>
+        <script>
+            var validar = false;
+        </script>
         <script src="./script/common.js"></script>
         <script src="./script/login.js?v=1"></script>
     </body>
