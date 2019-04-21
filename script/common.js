@@ -1,4 +1,4 @@
-var urlAPIGateway = 'http://192.168.56.102/server';
+var urlAPIGateway = '/server';
 
 // ====== API's
 var APIGatewayLogin = '/login.php';
