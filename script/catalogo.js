@@ -29,7 +29,9 @@ $(document).on('click', '.actualizarPrecio', function (e) {
 
     var idProducto =  $this.attr('data-id');
     Ajax('GET', urlAPIGateway, APIGatewayCatalogo, JSON.stringify({
-        'idUsuario': session.usercod
+        'idUsuario': session.usercod,
+        'idProducto': idProducto,
+        
     }), function (response) {
         var respuesta = JSON.parse(response);
     })
