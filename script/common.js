@@ -1,15 +1,17 @@
-var urlAPIGateway = 'https://sistema-ofertabienes.herokuapp.com/api';
+var urlAPIGateway = 'http://192.168.56.101/server';
 
 // ====== API's
 var APIGatewayLogin = '/login.php';
 var APIGatewayCatalogo = '/catalogo.php';
+var APIGatewayRegister = '/registro.php';
 
 var appSetSession = 'controller/setSession.php';
 var appGetSession = '../../controller/getSession.php';
 
 var session = {
 	nombre: '',
-	token: ''
+	token: '',
+	usercod: ''
 };
 
 var nombreEmpresa = 'PaPilos';
@@ -56,6 +58,7 @@ function loginSuccess (result, status) {
 	var respuesta = JSON.parse(result);
 	session.nombre = respuesta.userName
 	session.token = respuesta.token;
+	session.usercod = respuesta.userCod;
 
 	if (typeof tokenAssign == "function") {
 		tokenAssign();
@@ -66,5 +69,4 @@ function loginError () {
     alert('No hay sesion iniciada');
     window.location.href = 'http://192.168.56.102';
 }
-
 

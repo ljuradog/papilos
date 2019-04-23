@@ -6,19 +6,24 @@
         <title>AltaGama</title>
         <link rel="stylesheet" href="./assets/style/bootstrap.min.css">
     </head>
-    <body class="text-center">
+    <body class="text-left">
         <div style="width: 100%; max-width: 330px; padding: 15px; margin: auto;">
             <form id="login" class="form-signin">
                 <h1><span class=""></span>PaPilos</h1>
-                <p class="mt-3 font-weight-normal">Por favor iniciar sesion</p>
+                <p class="mt-3 font-weight-normal">Regístrate diligenciando los siguientes datos</p>
                 <label for="usuario" class="sr-only">Usuario</label>
                 <input type="text" id="usuario" class="mb-3 form-control" placeholder="Usuario" required="" autofocus="">
                 <label for="password" class="sr-only">Password</label>
-                <input type="password" id="password" class="form-control" placeholder="Password" required="">
+                <input type="password" id="password" class="mb-3 form-control" placeholder="Password" required="">
+                <label for="password">Correo</label>
+                <input type="email" id="correo" class="mb-3 form-control" placeholder="Correo" required="">
+                <label for="rol">Interesado en comprar o en vender</label>
+                <select id="rol" class="mb-3 form-control" placeholder="" required="">
+                    <option value="1">Comprar</option>
+                    <option value="2">Vender</option>
+                </select>
+                <button class="mt-3 btn btn-lg btn-primary btn-block" type="submit">Registrarse</button>
                 
-                <button class="mt-3 btn btn-lg btn-primary btn-block" type="submit">Iniciar Sesion</button>
-                <a class="p-2 text-primary" href="registro.php">Registrarse</a>
-
                 <p class="mt-5 mb-3 text-muted">© AltaGama</p>
             </form>
         </div>
@@ -28,6 +33,6 @@
             var validar = false;
         </script>
         <script src="./script/common.js"></script>
-        <script src="./script/login.js?v=1"></script>
+        <script src="./script/registro.js?v=1"></script>
     </body>
 </html>

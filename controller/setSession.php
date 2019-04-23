@@ -11,6 +11,7 @@ if (is_object($request)) {
     $_SESSION["apiToken"] = $request->token;
     $_SESSION["userName"] = $request->userName;
     $_SESSION["userRoles"] = $request->userRoles;
+    $_SESSION["userCod"] = $request->userCod;
     
     $response->msg = 'Se han seteado correctamente las variables de sesion';
     echo json_encode($response);

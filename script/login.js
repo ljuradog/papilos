@@ -1,21 +1,26 @@
 $('#login').submit(function (e) {
 	e.preventDefault();
 	rutaLoginStatus = 'esperarLlamada.php';
-	Ajax('POST', urlAPIGateway, APIGatewayLogin, {
-			redirect: false,
+	Ajax('POST', urlAPIGateway, APIGatewayLogin, JSON.stringify({
 			'username': $('#usuario').val(),
 			'password': $('#password').val()
-		}, loginStatus,
+		}), loginStatus,
 	);
 });
 
 var loginStatus = function (result, status) {
 
-    resultado = JSON.parse(result);
+	resultado = JSON.parse(result);
+	
+	if (typeof resultado.user == "undefined") {
+		alert("Usuario no registrado");
+		return false;
+	}
 
     var session = {
         'userName': resultado.user.username,
-        'userRoles': resultado.user.authorities,
+		'userRoles': resultado.user.authorities,
+		'userCod': resultado.user.usercod,
         'token': resultado.token
     };
 
@@ -34,4 +39,5 @@ var loginStatus = function (result, status) {
 			};
     });
 };
+
 
