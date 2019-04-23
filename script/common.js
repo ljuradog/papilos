@@ -1,4 +1,4 @@
-var urlAPIGateway = '/server';
+var urlAPIGateway = 'https://sistema-ofertabienes.herokuapp.com/api';
 
 // ====== API's
 var APIGatewayLogin = '/login.php';
@@ -65,5 +65,4 @@ function loginError () {
     alert('No hay sesion iniciada');
     window.location.href = 'http://192.168.56.102';
 }
-
 
