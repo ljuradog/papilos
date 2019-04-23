@@ -48,7 +48,6 @@
 					<thead>
 							<tr>
 									<th class="text-center">Id</th>
-									<th class="text-center">Titulo</th>
 									<th class="text-center">Items</th>
 									<th class="text-center">Ofertas</th>
 									<th class="text-center">Estado</th>
@@ -58,7 +57,6 @@
 					<tbody>
 							<tr>
 									<td class="text-right">1</td>
-									<td>Compra Secretaria</td>
 									<td class="text-right">20</td>
 									<td class="text-right">0</td>
 									<td class="text-center">Abierta</td>
@@ -80,6 +78,6 @@
 		</div>
 
 		<script src="../../assets/script/jquery-3.3.1.min.js"></script>
-		<script src="../../script/common.js?v=12"></script>
+		<script type="text/javascript" src="../../script/common.js?v=12"></script>
 	</body>
 </html>

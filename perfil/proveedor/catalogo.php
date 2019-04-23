@@ -59,12 +59,12 @@
 			</footer>
 		</div>
 
-		<script src="../../assets/script/jquery-3.3.1.min.js"></script>
-		<script src="../../assets/script/datatables.min.js"></script>
-		<script src="../../assets/script/underscore.js"></script>
+		<script type="text/javascript" src="../../assets/script/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="../../assets/script/datatables.min.js"></script>
+		<script type="text/javascript" src="../../assets/script/underscore.js"></script>
 
-		<script src="../../script/common.js?v=12"></script>
+		<script type="text/javascript" src="../../script/common.js?v=12"></script>
 
-		<script src="../../script/catalogo.js?v=12"></script>
+		<script type="text/javascript" src="../../script/catalogo.js?v=12"></script>
 	</body>
 </html>
