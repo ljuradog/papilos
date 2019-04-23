@@ -1,4 +1,4 @@
-var urlAPIGateway = 'https://backpapilos.herokuapp.com';
+var urlAPIGateway = 'https://sistema-ofertabienes.herokuapp.com/api';
 
 // ====== API's
 var APIGatewayLogin = '/login.php';
@@ -18,7 +18,6 @@ function Ajax(type, url, endpoint, params, callbackFunction, errorFunction = aja
 	$.ajax({
 		url: url + endpoint,
         type: type,
-		xhrFields: { withCredentials: true },
 		crossDomain: true,
 		data: params,
 		success: callbackFunction,
@@ -67,7 +66,5 @@ function loginError () {
     alert('No hay sesion iniciada');
     window.location.href = 'http://192.168.56.102';
 }
-
-
 
 
