@@ -14,7 +14,7 @@ $response = new stdClass;
 $requestType = $_SERVER['REQUEST_METHOD'];
 $request = file_get_contents('php://input');
 $peticion = json_decode($request);
-error_log(print_r($peticion, true));
+error_log("Peticion ". print_r(filter_input(INPUT_GET, 'idUsuario', FILTER_SANITIZE_URL), true));
 
 if ($requestType == "GET" || !is_null($peticion) ) {
     switch ($requestType) {
@@ -33,7 +33,7 @@ echo json_encode($response,JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE);
 
 // Obtiene los usuarios
 function getCatalogo($db, $request) {
-    return $db->query("select * from productos
+    return $db->query("select productos.* from productos
     left join catalogo on productos.productocod = catalogo.productocod
     where proveedorcod is null or proveedorcod = ". $request->idUsuario);
 }

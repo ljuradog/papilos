@@ -65,6 +65,6 @@
 
 		<script type="text/javascript" src="../../script/common.js?v=12"></script>
 
-		<script type="text/javascript" src="../../script/catalogo.js?v=12"></script>
+		<script type="text/javascript" src="../../script/catalogo.js?v=13"></script>
 	</body>
 </html>
