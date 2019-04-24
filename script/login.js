@@ -40,4 +40,3 @@ var loginStatus = function (result, status) {
     });
 };
 
-

@@ -1,4 +1,4 @@
-var urlAPIGateway = 'http://192.168.56.101/server';
+var urlAPIGateway = 'https://backpapilos.herokuapp.com/';
 
 // ====== API's
 var APIGatewayLogin = '/login.php';
@@ -68,6 +68,6 @@ function loginSuccess (result, status) {
 
 function loginError () {
     alert('No hay sesion iniciada');
-    window.location.href = 'http://192.168.56.101';
+    window.location.href = '/';
 }
 
