@@ -42,23 +42,24 @@
 		<div class="container">
 			<p class="lead">Bienvenido <span id="usuario">Leo</span>, </p>
 			
-			<h2 class="my-0 mr-md-auto mb-2 font-weight-normal">Catálogo</h2>
+			
 			<div class="row">
 				<div class="col-md-7 order-md-2 mb-4">
+					<h2 class="my-0 mr-md-auto mb-2 font-weight-normal">Catálogo</h2>
 					<table id="tablaCatalogo" class="display" width="100%"></table>
 				</div>
-				<div class="col-md-4 order-md-2 mb-4">
-					<h4 class="d-flex justify-content-between align-items-center mb-3">
+				<div class="col-md-4 order-md-2 mb-4 card">
+					<h4 class="d-flex justify-content-between align-items-center mt-3 mb-3">
 						<span class="text-muted">Nueva Cotización</span>
-						<span class="badge badge-secondary badge-pill">1</span>
+						<span class="badge badge-secondary badge-pill">0</span>
 					</h4>
 
 					<ul class="list-group mb-3">
 						<li class="list-group-item d-flex justify-content-between lh-condensed">
 							<div>
-								<h6 class="my-0"> Producto </h6>
+								<h6 class="my-0 font-weight-bold"> Producto </h6>
 							</div>
-							<span class="text-muted">Cantidad</span>
+							<span class="font-weight-bold">Cantidad</span>
 						</li>
 						<div id="cotizacionResumen">
 						</div>
@@ -66,9 +67,9 @@
 
 					<form class="card p-2">
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Promo code">
+							<input id="tiempo" type="text" class="form-control" placeholder="Minutos para Ofertar">
 							<div class="input-group-append">
-								<button type="submit" class="btn btn-secondary">Redimir</button>
+								<button  type="submit" class="btn btn-secondary">Solicitar Cotización</button>
 							</div>
 						</div>
 					</form>

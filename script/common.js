@@ -4,6 +4,7 @@ var urlAPIGateway = 'http://192.168.56.101/server';
 var APIGatewayLogin = '/login.php';
 var APIGatewayCatalogo = '/catalogo.php';
 var APIGatewayRegister = '/registro.php';
+var APIGatewayCotizacion = '/cotizacion.php';
 
 var appSetSession = 'controller/setSession.php';
 var appGetSession = '../../controller/getSession.php';
@@ -67,6 +68,6 @@ function loginSuccess (result, status) {
 
 function loginError () {
     alert('No hay sesion iniciada');
-    window.location.href = 'http://192.168.56.102';
+    window.location.href = 'http://192.168.56.101';
 }
 
